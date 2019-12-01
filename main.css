@@ -1,20 +1,209 @@
+@font-face {
+  font-family: "TitilliumWeb";
+  src: url(font/TitilliumWeb-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "TitilliumWeb";
+  text-decoration: none;
+}
 body {
-    background-color: black;
-    width: 95%;
-    margin: auto;
+  background-color: black;
+  width: 95%;
+  margin: auto;
 }
-
 .header {
-    background: url('素材/starfield-banner.jpg ');
-    position: fixed;
-    width: 95%;
+  background: url('素材/starfield-banner.jpg ');
+  position: fixed;
+  width: 95%;
 }
-
 .header .logo-link {
-    padding: 10px;
+  padding: 10px;
+}
+.header .logo {
+  width:110px;
+  margin:11px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  grid-template-rows: repeat(4, 260px);
+  grid-row-gap: 13px;
+  grid-column-gap: 13px;
+}
+.content {
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.content .title {
+  background-color: rgba(93, 127, 185, 0.8);
+  width: fit-content;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.content .title:hover {
+  background-color: rgba(93, 127, 185, 1);
+}
+.content .abstract {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000000;
+  width: auto;
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 1000;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.content .abstract:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+.information {
+  color: #ffffff;
+  font-size: 13px;
+}
+.information .title {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #ffffff;
+  line-height: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+.information .abstract {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  line-height: 15px;
+  display: block;
+  color: #ffffff;
+}
+.information .abstract:hover {
+  text-decoration: underline;
+}
+.information .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #ffffff;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.information .left, .information .right{
+  color: #ffffff;
+}
+.information .left:hover, .information .right:hover {
+  text-decoration: underline;
 }
 
-.header .logo {
-    width:110px;
-    margin:11px;
+.box1 {
+  background-image: url(images/pia21924-16.jpg);
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
 }
+.box2 {
+  background-image: url(images/mollweide_cycle.jpg);
+}
+.box3 {
+  background-color: #45709a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box4 {
+  background-image: url(images/s69-39961.jpg);
+  grid-column: 3 / span 2;
+}
+.box5 {
+  background-image: url(images/ssc2017-14a1.jpg);
+}
+.box6 {
+  background-image: url(images/pia22556-16.gif);
+  grid-column: 2 / span 2;
+}
+.box7 {
+  background-color: #45709a;
+}
+.box8 {
+  background-image: url(images/nasa_logo.png);
+} 
+.box9 {
+  background-image: url(images/io-home.gif);
+}
+.box10 {
+  background-image: url(images/cassini20170809.jpg);
+}
+.box11 {
+  background-image: url(images/fermiicecube_as.jpg);
+} 
+.more {
+  display: block;
+  color: #ffffff;
+  background-color: #15418c;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.more:hover {
+  background-color: #5d7fb9;
+}
+@media screen and (max-width: 1250px) { /*字体小一号*/
+  body {
+  }
+} 
+
+@media screen and (max-width: 1150px) { /*字体再小一号*/
+  body {
+  }
+} 
+@media screen and (max-width: 1024px) { /*没有导航栏*/
+  body {
+  }
+} 
+@media screen and (max-width: 990px) { /*两栏布局*/
+  .container {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+  }
+  .box1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
+  .box4 {
+    grid-column: 1 / span 1;
+  }
+  .box6 {
+    grid-column: 1 / span 1;
+  }
+} 
+@media screen and (max-width: 768px) { /*一栏布局*/
+  .container {
+    display: grid;
+    grid-template-columns: 99%;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px;
+  }
+  .box1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  .box4 {
+    grid-column: 1 / span 1;
+  }
+  .box6 {
+    grid-column: 1 / span 1;
+  }
+} 
