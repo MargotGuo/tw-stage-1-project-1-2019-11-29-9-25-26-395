@@ -1,7 +1,8 @@
 # tw-stage-1-project-1
 
 - GitPage: https://margotguo.github.io/tw-stage-1-project-1-2019-11-29-9-25-26-395/
-
+- if the browser cannot play the music automatically, please go to **bottom of the page** and activate it manually.
+- **Responsive layouts** is applied followed by NASA Main Page, and you can try it ^_^
 
 ### 要求
 - 模仿nasa.pdf展示的页面，在index.html和main.css文件中进行编辑，完成一个一模一样的页面。
