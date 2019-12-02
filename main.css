@@ -265,7 +265,6 @@ body {
 }
 .box7 {
   background-color: #45709a;
-  position: relative;
   overflow: hidden;
 }
 .box8 {
@@ -273,6 +272,7 @@ body {
 } 
 .box9 {
   background-image: url(images/io-home.gif);
+  position: relative;
 }
 .box10 {
   background-image: url(images/cassini20170809.jpg);
