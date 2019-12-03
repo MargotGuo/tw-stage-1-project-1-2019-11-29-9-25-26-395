@@ -17,11 +17,6 @@ body {
   height: 10px;
 }
 .banner {
-  height: 95px;
-  background-image: url(images/starfield-banner.jpg);
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
   position: sticky;
   -webkit-position: sticky;
   -ms-position: sticky;
@@ -29,18 +24,21 @@ body {
   -o-position: sticky;
   top: 0;
   z-index: 1;
-  width: 100%;
-  margin: auto;
+  height: 95px;
+  background-image: url(images/starfield-banner.jpg);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 .logo-top {
+  position: absolute;
+  left: 0;
+  top: 10px;
   height: 95px;
   width: 95px;
   background-image: url(images/nasa-logo.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  top: 20px;
 }
 .header {
   height: 90px;
@@ -59,50 +57,51 @@ body {
   padding-top: 4px;
 }
 .search {
-  padding: 5px;
-  padding-left: 10px;
   height: 25px;
   width: 120px;
+  padding: 5px;
+  padding-left: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   border-style: none;
 }
 .search-icon {
-  height: 28px;
-  width: 28px;
-  background-image: url(images/search.svg);
-  margin: 4px;
-  background-color: transparent;
-  border-style: none;
   position: relative;
   right: -135px;
+  height: 28px;
+  width: 28px;
+  margin: 4px;
+  background-image: url(images/search.svg);
+  background-color: transparent;
+  border-style: none;
   outline-width: 0;
   cursor:pointer;
 }
 .nav {
+  margin-right: -28px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: -28px;
 }
 .menu {
+  margin-top: -12px;
   display: flex;
   align-items: center;
-  margin-top: -12px;
 }
 .menu-container {
+  position: relative;
   height: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: relative;
+}
+.menu-container:hover {
+  background-color: rgb(21, 65, 140);
+  cursor:pointer;
 }
 .menu-text {
-  color: #ffffff;
+  padding: 5px 15px 5px 15px;
   font-size: 17px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  color: rgb(255, 255, 255);
 }
 .menu-list {
   position: absolute;
@@ -112,21 +111,14 @@ body {
   flex-direction: column;
 }
 .menu-detail {
-  color: #ffffff;
-  font-size: 17px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: rgb(21, 65, 140);
   display: none;
+  padding: 10px 15px 10px 15px;
+  background-color: rgb(21, 65, 140);
+  color: rgb(255, 255, 255);
+  font-size: 17px;
 }
 .menu-detail:hover {
   background-color: rgb(7, 47, 84);
-}
-.menu-container:hover {
-  background-color: rgb(21, 65, 140);
-  cursor:pointer;
 }
 .menu-container:hover .menu-detail {
   display: block;
@@ -135,17 +127,15 @@ body {
   display: none;
 }
 .with-border {
-  border-right-color: rgba(255, 255, 255, 0.5);
-  border-right-style: solid;
-  border-right-width: 1px;
+  border-right: rgba(255, 255, 255, 0.5) solid 1px;
 }
 .option {
   display: flex;
   align-items: center;
 }
 .option-container {
-  background-color: rgba(255, 255, 255, 0.3);
   height: 37px;
+  background-color: rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: center;
 }
@@ -154,94 +144,81 @@ body {
   cursor:pointer;
 }
 .option-text {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-size: 12px;
   line-height: 20px;
-  padding-left: 13px;
-  padding-right: 13px;
+  padding: 0px 13px 0px 13px;
 }
 .container {
+  padding-top: 10px;
+  margin-bottom: 25px;
   display: grid;
   grid-template-columns: 24% 24% 24% 24%;
   grid-template-rows: repeat(4, 260px);
   grid-row-gap: 13px;
   grid-column-gap: 13px;
-  padding-top: 10px;
-  margin-bottom: 25px;
 }
 .content {
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 .content .title {
+  padding: 5px 10px 5px 10px;
   background-color: rgba(93, 127, 185, 0.8);
   width: fit-content;
+  -moz-width: fit-content;
+  -ms-width: fit-content;
+  -o-width: fit-content;
+  -webkit-width: fit-content;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 .content .title:hover {
   background-color: rgba(93, 127, 185, 1);
 }
 .content .abstract {
+  padding: 3px 10px 3px 10px;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #000000;
-  width: auto;
   font-size: 17px;
+  color: rgb(0, 0, 0);
   line-height: 21px;
   font-weight: 1000;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
 .content .abstract:hover {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255, 255, 255);
 }
 .information {
-  color: #ffffff;
   font-size: 13px;
+  color: rgb(255, 255, 255);
 }
 .information .title {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #ffffff;
+  margin: 8px 10px 8px 10px;
+  border-bottom: solid 1px rgb(255, 255, 255);
   line-height: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 8px;
 }
 .information .abstract {
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  line-height: 15px;
   display: block;
-  color: #ffffff;
+  margin: 5px;
+  line-height: 15px;
+  color: rgb(255, 255, 255);
 }
 .information .abstract:hover {
   text-decoration: underline;
 }
 .information .footer {
+  margin: 10px 10px 0px 10px;
+  border-top: solid 1px rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #ffffff;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 .information .left, .information .right{
-  color: #ffffff;
+  color: rgb(255, 255, 255);
 }
 .information .left:hover, .information .right:hover {
   text-decoration: underline;
@@ -252,12 +229,12 @@ body {
   width: 100%;
 }
 .camera-triangle {
+  position: absolute;
+  top: 0;
+  right: 0;
   height: 50px;
   width: 50px;
-  position: absolute;
-  top:0;
-  right: 0px;
-  background: linear-gradient(to bottom left , #000000 33px, transparent 1px);
+  background: linear-gradient(to bottom left , rgb(0, 0, 0) 33px, transparent 1px);
   display: flex;
   flex-direction: row-reverse;
 }
@@ -265,11 +242,10 @@ body {
   width: 40%;
   height: 40%;
 }
-
 .box1 {
-  background-image: url(images/pia21924-16.jpg);
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+  background-image: url(images/pia21924-16.jpg);
 }
 .box2 {
   background-image: url(images/mollweide_cycle.jpg);
@@ -281,27 +257,27 @@ body {
   justify-content: space-between;
 }
 .box4 {
-  background-image: url(images/s69-39961.jpg);
   grid-column: 3 / span 2;
+  background-image: url(images/s69-39961.jpg);
 }
 .box5 {
-  background-image: url(images/ssc2017-14a1.jpg);
   position: relative;
+  background-image: url(images/ssc2017-14a1.jpg);
 }
 .box6 {
-  background-image: url(images/pia22556-16.gif);
   grid-column: 2 / span 2;
+  background-image: url(images/pia22556-16.gif);
 }
 .box7 {
-  background-color: #000000;
+  background-color: rgb(0, 0, 0);
   overflow: hidden;
 }
 .box8 {
   background-image: url(images/nasa_logo.png);
 } 
 .box9 {
-  background-image: url(images/io-home.gif);
   position: relative;
+  background-image: url(images/io-home.gif);
 }
 .box10 {
   background-image: url(images/cassini20170809.jpg);
@@ -311,15 +287,15 @@ body {
 } 
 .more {
   display: block;
-  color: #ffffff;
-  background-color: #15418c;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
   line-height: 40px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(21, 65, 140);
 }
 .more:hover {
-  background-color: #5d7fb9;
+  background-color: rgb(93, 127, 185);
 }
 .footer {
   margin-top: 30px;
@@ -334,34 +310,32 @@ body {
   background-repeat: no-repeat;
 }
 .institution p {
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   font-weight: bold;
 }
 .list {
+  margin-bottom: 50px;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 50px;
 }
 .list a {
+  padding: 0 20px 0 20px;
   color: rgb(93, 127, 185);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 11px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .list a:hover {
   text-decoration: underline;
 }
-@media screen and (max-width: 1250px) { /*字体小一号*/
+@media screen and (max-width: 1250px) { /*font-size smaller*/
   .menu-text {
     font-size: 13px;
   }
 } 
-
-@media screen and (max-width: 1150px) { /*字体再小一号*/
+@media screen and (max-width: 1150px) { /*footer re-layout*/
   .menu-text {
     font-size: 12px;
   }
@@ -384,7 +358,7 @@ body {
     flex-direction: column;
   }
 } 
-@media screen and (max-width: 1024px) { /*没有导航栏*/
+@media screen and (max-width: 1024px) { /*navigation hidden*/
   .nav {
     display: none;
   }
@@ -411,8 +385,7 @@ body {
   }
   .special {
     margin-right: -30px;
-    display: block;
-    display: flex;
+    display: block flex;
     flex-direction: row;
     align-items: center;
   }
@@ -425,11 +398,11 @@ body {
     display: block;
   }
 } 
-@media screen and (max-width: 990px) { /*两栏布局*/
+@media screen and (max-width: 990px) { /*two column layout*/
   .container {
     display: grid;
     grid-template-columns: 49% 49%;
-    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    grid-template-rows: repeat(6, 300px);
   }
   .box1 {
     grid-column: 1 / span 2;
@@ -442,11 +415,11 @@ body {
     grid-column: 1 / span 1;
   }
 } 
-@media screen and (max-width: 768px) { /*一栏布局*/
+@media screen and (max-width: 768px) { /*one column layout*/
   .container {
     display: grid;
     grid-template-columns: 99%;
-    grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px;
+    grid-template-rows: repeat(11, 300px);
   }
   .box1 {
     grid-column: 1 / span 1;
@@ -459,7 +432,7 @@ body {
     grid-column: 1 / span 1;
   }
 } 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) { /*layout for cellphones - "NASA TV" hidden*/
   .special {
     display: none;
   }
