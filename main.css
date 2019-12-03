@@ -171,10 +171,6 @@ body {
   padding: 5px 10px 5px 10px;
   background-color: rgba(93, 127, 185, 0.8);
   width: fit-content;
-  -moz-width: fit-content;
-  -ms-width: fit-content;
-  -o-width: fit-content;
-  -webkit-width: fit-content;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.8);
 }
